@@ -24,3 +24,15 @@ Cada tema está agrupado a su vez en apartados, de los cuales, hay algunos que e
     - Objetos
       - Métodos
       - Colecciones
+
+###### Programación en JavaScript:
+  - Introducción a JavaScript 
+    - Tipos de Datos
+      - Arrays en JavaScript
+    - Condicionales
+    - Bucles
+    - Funciones
+      - Funciones especiales
+  - React
+    - Introducción a React
+  
