@@ -24,7 +24,7 @@ Los temas que hay creados son los siguientes:
 - Aprendiendo a programar
     - Programación en Java
     - Programación en JavaScript y ReactJS
-    - Programación en Python
+- Lenguajes de marcas
 - Aprende a utilizar :star2: Git :star2:
 
 ###### 3. Bases de datos
