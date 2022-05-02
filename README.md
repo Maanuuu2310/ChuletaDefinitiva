@@ -22,7 +22,7 @@ Los temas que hay creados son los siguientes:
 
 - ¿En que consiste programar? / ¿Qué es un lenguaje de programación?
 - Aprendiendo a programar
-    - Programación en Java
+    - [Programación en Java](./Programacion/Apartado%202%20-%20Aprendiendo%20a%20Programar/1.%20Java/0%20-%20Indice.md)
     - Programación en JavaScript y ReactJS
 - Lenguajes de marcas
 - Aprende a utilizar :star2: Git :star2:
