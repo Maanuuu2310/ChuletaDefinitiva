@@ -128,7 +128,7 @@ De ahí que nuestro resultado sea algo como esto.
 
 <center>
 
-![Creación de una clase Java en IntelliJ Idea](Imgs/Objetos/Objetos7.png)
+![Instanciando un objeto de tipo Vehículo](Imgs/Objetos/Objetos7.png)
 
 </center>
 
@@ -142,3 +142,22 @@ Por cierto la variable *fechaDeCompra* al tratarse de un tipo de dato LocalDate,
 
 </center>
 
+La fecha (en nuestro formato) sería 29/1/2000.
+
+Pero ¿y por qué lo hacemos así?, bueno, realmente también podemos omitir el uso de la variable y poner directamente el dato en el constructor, tal y como se puede apreciar en la siguiente imagen:
+
+<center>
+
+![Creación de una clase Java en IntelliJ Idea](Imgs/Objetos/Objetos9.png)
+
+</center>
+
+
+Pero de forma cognitiva es mucho mejor hacerlo usando una variable la cual se pueda reconocer de forma más directa, de ahí que lo dijese como obligación más que como recomendación (por buena praxis vamos).
+
+Lo que aquí nos puede surgir una duda: ¿ahora como puedo saber que nombre tengo en miNuevoVehiculo? o ¿cómo puedo saber cuál es mi fecha de compra?. Para ello existen unos elementos llamados “Métodos de acceso”, los cuales se comentarán en el siguiente apartado.
+
+<br>
+
+[:arrow_backward: Anterior punto](7%20-%20Objetos%20en%20Java.md) <br>
+[Siguiente punto :arrow_forward:](7.1%20-%20M%C3%A9todos%20de%20Acceso.md)
