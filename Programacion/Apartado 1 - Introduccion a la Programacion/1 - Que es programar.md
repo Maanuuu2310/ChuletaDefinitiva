@@ -12,4 +12,5 @@ Desmintiendo lo que se suele decir de la programación deberemos tener en cuenta
 
 A su vez, más adelante podremos ver que ya no solo deberemos seguir estos puntos, si no también una serie de "normas" que se aplican a este mundo en general, como por ejemplo como se deberá ver visualmente nuestro código y el termino de ***legibilidad del código***, igualmente repito, no asustarse ya llegaremos a eso. 
 
+
 [Siguiente punto :arrow_forward:](./2%20-%20Que%20es%20un%20lenguaje%20de%20programacion.md)

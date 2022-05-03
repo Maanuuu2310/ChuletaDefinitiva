@@ -1,4 +1,4 @@
-### Objetos:
+## Objetos:
 
 ``` diff
 - Para esta actividad se ha importado la clase LocalDate.
@@ -7,9 +7,9 @@
 Hasta ahora, hemos utilizado variables que no contienen si no un único valor, el cual puede ser alterado a medida que se va nombrando en el código, como en el siguiente ejemplo:
 <br/>
 
-> String nombre = “Moisés”; 
-> 
-> nombre = “Luis”;
+    String nombre = “Moisés”; 
+
+    nombre = “Luis”;
 
 <br/>
 En el primer momento en el veamos la variable nombre tendrá el valor “Moisés”, y tras alterar su contenido podremos ver “Luis”. Esto es al menos lo que hemos visto hasta ahora, y ocurre con todos los elementos; se define un tipo de dato, seguido de un nombre y una igualación con el contenido que va a residir dentro.
@@ -26,13 +26,12 @@ Pues, existe un tipo de elemento que se denomina Objeto, (Object en inglés) est
 Estos elementos son elementos que cualquier persona que hable castellano de manera promedia a primeras ya entiende, e intenta recrearlas en su cabeza. Pues los objetos funcionan de una manera parecida; si nosotros nos fijamos, antes para poder definir a una persona hacíamos lo siguiente:
 <br/>
 
-> 
-> String alumno1Nombre = “Moisés Fernández Muiña”;
-> 
-> int alumno1Edad = 21;
-> 
-> String alumno1Clase = “1ºDAM”;
-> 
+    String alumno1Nombre = “Moisés Fernández Muiña”;
+
+    int alumno1Edad = 21;
+ 
+    String alumno1Clase = “1ºDAM”;
+ 
 
 <br/>
 Pero, si nos damos cuenta, estas variables no tienen ninguna relación entre sí; es verdad que los nombres se refieren a un “alumno1” seguido de lo que DEBERÍA residir dentro de estas variables, ya que yo podría escribir en alumno1Nombre el nombre de mi plato favorito y el valor como tal no cumple con el nombre de la variable (ya que debería ser el de un alumno) pero sí con el tipo de dato String (porque es una cadena); y a su vez es un tostón tener que crear 3 variables cada vez que queremos crear un nuevo usuario, y luego vara ver los datos de cada uno ni te cuento. 
@@ -116,7 +115,7 @@ Pero claro, ¿para qué sirve esto?, sencillamente de momento no hace absolutame
 
 Y tenemos que escribir lo siguiente:
 
-> Vehiculo miNuevoVehiculo = new Vehiculo("123456789-F", 125, "Vehículo con 4 ruedas", fechaDe Compra, "Rojo" );
+    Vehiculo miNuevoVehiculo = new Vehiculo("123456789-F", 125, "Vehículo con 4 ruedas", fechaDe Compra, "Rojo" );
 
 
 1. Nombre del objeto: Este es el nombre del elemento que acabamos de crear, en mi caso es *Vehículo*.
@@ -128,7 +127,7 @@ De ahí que nuestro resultado sea algo como esto.
 
 <center>
 
-![Creación de una clase Java en IntelliJ Idea](Imgs/Objetos/Objetos7.png)
+![Instanciando un objeto de tipo Vehículo](Imgs/Objetos/Objetos7.png)
 
 </center>
 
@@ -142,3 +141,22 @@ Por cierto la variable *fechaDeCompra* al tratarse de un tipo de dato LocalDate,
 
 </center>
 
+La fecha (en nuestro formato) sería 29/1/2000.
+
+Pero ¿y por qué lo hacemos así?, bueno, realmente también podemos omitir el uso de la variable y poner directamente el dato en el constructor, tal y como se puede apreciar en la siguiente imagen:
+
+<center>
+
+![Creación de una clase Java en IntelliJ Idea](Imgs/Objetos/Objetos9.png)
+
+</center>
+
+
+Pero de forma cognitiva es mucho mejor hacerlo usando una variable la cual se pueda reconocer de forma más directa, de ahí que lo dijese como obligación más que como recomendación (por buena praxis vamos).
+
+Lo que aquí nos puede surgir una duda: ¿ahora como puedo saber que nombre tengo en miNuevoVehiculo? o ¿cómo puedo saber cuál es mi fecha de compra?. Para ello existen unos elementos llamados “Métodos de acceso”, los cuales se comentarán en el siguiente apartado.
+
+<br>
+
+[:arrow_backward: Anterior punto](7%20-%20Objetos%20en%20Java.md) <br>
+[Siguiente punto :arrow_forward:](7.1%20-%20M%C3%A9todos%20de%20Acceso.md)
