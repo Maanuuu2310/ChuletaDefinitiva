@@ -42,6 +42,8 @@ Cada tema está agrupado a su vez en apartados, de los cuales, hay algunos que e
       - [Git en Windows](Apartado%204%20-%20Aprende%20a%20utilizar%20Git/Instalaciones/1.1%20Git%20en%20Windows.md)
       - [Git en Linux](Apartado%204%20-%20Aprende%20a%20utilizar%20Git/Instalaciones/1.2%20Git%20en%20Linux.md)
       - [Git en Mac](Apartado%204%20-%20Aprende%20a%20utilizar%20Git/Instalaciones/1.3%20Git%20en%20Mac.md)
+    - [Primeros pasos con Git](Apartado%204%20-%20Aprende%20a%20utilizar%20Git/2%20-%20Primeros%20pasos%20con%20Git.md)
+    - Instrucciones más comunes
   
 
 <br>

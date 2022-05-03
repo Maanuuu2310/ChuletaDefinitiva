@@ -262,3 +262,5 @@ De momento toda esta información la ignoraremos completamente y haremos caso a 
 
 Sencillamente nos notifica que nos hemos cambiado correctamente.
 Ahora si nos fijamos, el documento ha cambiado; ya no tiene el contenido que habíamos introducido, y ya no solo este, cualquier cambio que nosotros hubiésemos tenido respecto al momento actual habría sido visible ya que son dos commits distintos, es decir, dos marcas de tiempo diferentes.
+
+[:arrow_backward: Anterior punto](1%20-%20Instalando%20Git.md) 
