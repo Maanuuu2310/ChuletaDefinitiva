@@ -6,7 +6,7 @@ Evidentemente se enseñará como se hacen ciertas cosas en todos los lenguajes, 
 
 La estructura de este apartado es la siguiente:
 
-- ¿En qué consiste la programación? / ¿Qué es un lenguaje de programación?
+- [¿En qué consiste la programación?](Apartado%201%20-%20Introduccion%20a%20la%20Programacion/1%20-%20Que%20es%20programar.md) / [¿Qué es un lenguaje de programación?](Apartado%201%20-%20Introduccion%20a%20la%20Programacion/2%20-%20Que%20es%20un%20lenguaje%20de%20programacion.md)
   - Introducción a pseudocódigo
 
 Recomiendo que en caso de no haber visto nada de programación y es tu primera vez, recomiendo que antes de ver los siguientes puntos, hayas visto por lo menos el anterior apartado, para así tener una introducción mínima a este mundillo.
