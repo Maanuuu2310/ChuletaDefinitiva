@@ -14,8 +14,17 @@ public class CustomCollection {
 
     public void insert(Object elemento, int posicion) {
         if (numValores == datos.length) {
-            System.out.println("Hola");
+            Object auxuliar[] = datos;
+            datos = new Object[datos.length * 2];
+
+            for (int i = 0; i < numValores; i++) {
+                datos[i] = auxuliar[i];
+            }
+
+            auxuliar = null;
         }
     }
 
+
+    auxiliar[]
 }

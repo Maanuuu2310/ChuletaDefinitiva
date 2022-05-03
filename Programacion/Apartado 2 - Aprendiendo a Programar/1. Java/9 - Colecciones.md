@@ -85,9 +85,33 @@ Esto es lo que deberá hacer nuestro método **insert ( )**. Pero claro, para ha
 
     insert(Object elemento, int posicion);
 
-Vamos a crear este elemento:
+Vamos a crear este elemento.
 
-En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***:
+###### Método insert( )
+
+En primer lugar lo declararemos en nuestro código con los parámetros que nos pide (elemento y posición), y al no devolver ningún valor, será un ***void***.
+
+Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico. 
+
+
+En la condición se añadió un array nuevo, llamado "auxiliar", dicho array servirá **unicamente, para hacer una copia del Array original** (datos[ ] o data[ ] como lo hayais llamado).
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones7.png)
+
+</center>
+
+Y como podemos ver, justo después al tener ya una copia de los datos que teniamos, podemos remplazar el Array anterior con uno nuevo **que encima es más grande** que el anterior (concrectamente el doble).
+
+La sintaxis que podemos ver, es exactamente la misma que la vista en el constructor, con la diferencia de que estamos creando un Array nuevo, el doble de grande. Aun así, aun no hemos terminado, tenemos que meter los datos del Array auxiliar en el nuevo Array, para ello haremos un bucle "for i" sencillo que se encargará de poner los datos en el nuevo Array, evidentemente tenemos datos que nos pueden facilitar esta tarea, uno de ellos es el *numValores* por ejemplo:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8.png)
+
+</center>
+
 
 
 
