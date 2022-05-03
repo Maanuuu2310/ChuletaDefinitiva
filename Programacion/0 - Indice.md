@@ -39,4 +39,4 @@ Cada tema está agrupado a su vez en apartados, de los cuales, hay algunos que e
 
 <br>
 
-**[Indice :house:](/README.md)**
+**[Indice General :house:](/README.md)**

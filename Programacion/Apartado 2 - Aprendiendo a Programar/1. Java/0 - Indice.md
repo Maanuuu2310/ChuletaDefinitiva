@@ -17,4 +17,4 @@ En esta sección verás los puntos relacionados con la programación en el lengu
 
 <br>
 
-**[Indice :house:](/README.md)**
+**[Indice Programación :house:](../../0%20-%20Indice.md)**

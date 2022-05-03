@@ -1,4 +1,4 @@
-### Objetos:
+## Objetos:
 
 ``` diff
 - Para esta actividad se ha importado la clase LocalDate.
@@ -7,9 +7,9 @@
 Hasta ahora, hemos utilizado variables que no contienen si no un único valor, el cual puede ser alterado a medida que se va nombrando en el código, como en el siguiente ejemplo:
 <br/>
 
-> String nombre = “Moisés”; 
-> 
-> nombre = “Luis”;
+    String nombre = “Moisés”; 
+
+    nombre = “Luis”;
 
 <br/>
 En el primer momento en el veamos la variable nombre tendrá el valor “Moisés”, y tras alterar su contenido podremos ver “Luis”. Esto es al menos lo que hemos visto hasta ahora, y ocurre con todos los elementos; se define un tipo de dato, seguido de un nombre y una igualación con el contenido que va a residir dentro.
@@ -26,13 +26,12 @@ Pues, existe un tipo de elemento que se denomina Objeto, (Object en inglés) est
 Estos elementos son elementos que cualquier persona que hable castellano de manera promedia a primeras ya entiende, e intenta recrearlas en su cabeza. Pues los objetos funcionan de una manera parecida; si nosotros nos fijamos, antes para poder definir a una persona hacíamos lo siguiente:
 <br/>
 
-> 
-> String alumno1Nombre = “Moisés Fernández Muiña”;
-> 
-> int alumno1Edad = 21;
-> 
-> String alumno1Clase = “1ºDAM”;
-> 
+    String alumno1Nombre = “Moisés Fernández Muiña”;
+
+    int alumno1Edad = 21;
+ 
+    String alumno1Clase = “1ºDAM”;
+ 
 
 <br/>
 Pero, si nos damos cuenta, estas variables no tienen ninguna relación entre sí; es verdad que los nombres se refieren a un “alumno1” seguido de lo que DEBERÍA residir dentro de estas variables, ya que yo podría escribir en alumno1Nombre el nombre de mi plato favorito y el valor como tal no cumple con el nombre de la variable (ya que debería ser el de un alumno) pero sí con el tipo de dato String (porque es una cadena); y a su vez es un tostón tener que crear 3 variables cada vez que queremos crear un nuevo usuario, y luego vara ver los datos de cada uno ni te cuento. 
@@ -116,7 +115,7 @@ Pero claro, ¿para qué sirve esto?, sencillamente de momento no hace absolutame
 
 Y tenemos que escribir lo siguiente:
 
-> Vehiculo miNuevoVehiculo = new Vehiculo("123456789-F", 125, "Vehículo con 4 ruedas", fechaDe Compra, "Rojo" );
+    Vehiculo miNuevoVehiculo = new Vehiculo("123456789-F", 125, "Vehículo con 4 ruedas", fechaDe Compra, "Rojo" );
 
 
 1. Nombre del objeto: Este es el nombre del elemento que acabamos de crear, en mi caso es *Vehículo*.
