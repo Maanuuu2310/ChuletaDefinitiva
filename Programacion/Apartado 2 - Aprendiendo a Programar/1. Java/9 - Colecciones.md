@@ -10,7 +10,6 @@ Nuestra Coleccion va a ser un Objeto, como los que vimos anteriormente; dicho ob
 
 ###### La estructura del objeto Collection
 
-El nombre que va a tener nuestro objeto será Array, también llamado *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 El nombre que va a tener nuestro objeto será *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 
 Definiremos dos atributos:
@@ -169,7 +168,7 @@ Si nos fijamos, la siguiente posición es la posición 4 y nuestra variable numV
 
 Sin más dilación vamos a ponernos a trabajar, empezaremos por los métodos **insert** y **delete**.
 
-###### Método insert( )
+##### Método insert( )
 
 Vamos a empezar pues por el método insert:
 
@@ -263,5 +262,6 @@ Y por último, en cada vuelta que da el for, lo que hará internamente es añadi
 ![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones19.gif)
 
 </center>
+
 
 
