@@ -11,6 +11,7 @@ Nuestra Coleccion va a ser un Objeto, como los que vimos anteriormente; dicho ob
 ###### La estructura del objeto Collection
 
 El nombre que va a tener nuestro objeto será Array, también llamado *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
+El nombre que va a tener nuestro objeto será *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 
 Definiremos dos atributos:
 - El atributo **datos[ ]** o **data[ ]**, el cual será un Array que se encargará de almacenar la información que queremos almacenar en nuestro objeto CustomCollection. Este Array almacenará **OBJETOS**, ya que como pudimos ver en el anterior apartado, **todos los objetos, heredan del objeto Object**, haciendo asi que todos los valores que utilizaremos (String, Integer, Float, Objetos creados por nosotros...) se podrán almacenar aquí. Dicho Array lo declararemos como ***nulo***. 
@@ -89,6 +90,30 @@ Esto es lo que deberá hacer nuestro método **insert ( )**. Pero claro, para ha
   - **Condición**: en caso de que borremos un dato, que tenga datos a su alrededor, tendremos hacer que el hueco sea rellenado por los datos que se encuentran detrás de la posición del dato que hemos borrado.
 
 Imaginemos el Array que teniamos antes, justo cuando habiamos añadido el nombre de Alberto; imaginemos que queremos borrar al usuario Marcos:
+Vamos a crear este elemento.
+
+###### Método insert( )
+
+En primer lugar lo declararemos en nuestro código con los parámetros que nos pide (elemento y posición), y al no devolver ningún valor, será un ***void***.
+
+Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico. 
+
+
+En la condición se añadió un array nuevo, llamado "auxiliar", dicho array servirá **unicamente, para hacer una copia del Array original** (datos[ ] o data[ ] como lo hayais llamado).
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones9.png)
+
+</center>
+
+Vamos a empezar pues por el método insert:
+
+En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***.
+
+Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico.
+
+En la condición se añadió un array nuevo, lo llamaremos "auxiliar"; dicho array servirá unicamente, para hacer una copia del Array original (datos[ ] o data[ ] como lo hayais llamado).
 
 <center>
 
@@ -96,9 +121,16 @@ Imaginemos el Array que teniamos antes, justo cuando habiamos añadido el nombre
 
 </center>
 
-Vamos a empezar pues por el método insert:
+Y como podemos ver, justo después al tener ya una copia de los datos que teniamos, podemos remplazar el Array anterior con uno nuevo **que encima es más grande** que el anterior (concrectamente el doble).
 
-En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***:
+La sintaxis que podemos ver, es exactamente la misma que la vista en el constructor, con la diferencia de que estamos creando un Array nuevo, el doble de grande. Aun así, aun no hemos terminado, tenemos que meter los datos del Array auxiliar en el nuevo Array, para ello haremos un bucle "for i" sencillo que se encargará de poner los datos en el nuevo Array, evidentemente tenemos datos que nos pueden facilitar esta tarea, uno de ellos es el *numValores* por ejemplo:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8.png)
+
+</center>
+
 
 
 

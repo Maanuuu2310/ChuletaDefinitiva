@@ -106,5 +106,5 @@ Esto que hemos visto es cómo funcionan las aplicaciones de gestión de versione
 
 Existen dos tipos de estas aplicaciones: las distribuidas y las centralizadas (git es distribuida por ejemplo) pero en esto no quiero entrar en detalle ya que puede llegar a ser confuso, pero no está demás que sepamos que existen.
 #
-[Siguiente punto :arrow_forward:](1%20-%20Instalando%20Git.md)
+[Siguiente punto :arrow_forward:](1%20-%20Instalando%20Git.md) <br>
 **[Volver al Indice de Programacion :house:](/Programacion/0%20-%20Indice.md)**

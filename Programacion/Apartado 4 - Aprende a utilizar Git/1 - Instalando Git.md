@@ -21,6 +21,6 @@ A continuación, proporciono un Indice en el que tendreis todas las formas de in
 - [En Mac.](Instalaciones/1.3%20Git%20en%20Mac.md)
 
 
-[:arrow_backward: Anterior punto](0%20-%20Que%20es%20Git.md)    
+[:arrow_backward: Anterior punto](0%20-%20Que%20es%20Git.md)    <br>
 
 [Siguiente punto :arrow_forward:](2%20-%20Primeros%20pasos%20con%20Git.md)
