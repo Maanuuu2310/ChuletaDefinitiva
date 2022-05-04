@@ -107,7 +107,15 @@ Si lo borramos como hemos hecho hasta ahora (que realmente no se puede borrar, s
 
 </center>
 
-Pero **no es esto lo que nos piden**, o al menos no es lo único, si no que queremos que los datos que hayan a la derecha pasen a este nuevo lugar. Pero claro, si nosotros en lugar de borrar directamente el dato, utilizasemos el valor que viene después, en este caso *Luis*, para escachar a *Marcos* (no escacheis a la gente pls) estariamos también borrando el dato ¿verdad?, realmente remplazandolo pero sería lo mismo conceptualmente:
+Pero **no es esto lo que nos piden**, o al menos no es lo único, si no que queremos que los datos que hayan a la derecha pasen a este nuevo lugar y rellenen el espacio en blanco. 
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8_Wrong.png)
+
+</center>
+
+Pero claro, si nosotros en lugar de borrar directamente el dato, utilizasemos el valor que viene después, en este caso *Luis*, para escachar a *Marcos* (no escacheis a la gente pls) estariamos también borrando el dato ¿verdad?, realmente remplazandolo pero sería lo mismo conceptualmente:
 
 <center>
 
@@ -131,6 +139,8 @@ Con esto, borraremos el dato *Alejandro* repetido de la última posición de nue
 
     datos[numValores - 1] = null;
     numValores--;
+
+- Por otro lado, queremos un método **add( )**, que se encargará de añadir un valor en la última posición de nuestro Array (y como ocurría con el método insert, en caso de no haber espacio pues que se cree más).
 
 ###### Método insert( )
 

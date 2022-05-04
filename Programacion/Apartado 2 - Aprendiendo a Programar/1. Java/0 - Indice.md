@@ -13,7 +13,8 @@ En esta sección verás los puntos relacionados con la programación en el lengu
     - Funciones
     - [Objetos](7%20-%20Objetos%20en%20Java.md)
       - [Métodos](7.1%20-%20Métodos%20de%20Acceso.md)
-      - Colecciones
+      - Herencia de Clases
+      - [Colecciones](9%20-%20Colecciones.md)
 
 <br>
 
