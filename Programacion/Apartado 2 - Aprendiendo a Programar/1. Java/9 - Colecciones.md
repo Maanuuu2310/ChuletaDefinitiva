@@ -8,7 +8,7 @@ Para poder crear un Array dinámico deberemos saber primero como funciona:
 
 Nuestra Coleccion va a ser un Objeto, como los que vimos anteriormente; dicho objeto tendrá sus atributos, constructor y métodos. Vamos a ir de uno en uno viendo cada una de sus partes.
 
-###### La estructura del objeto Collection
+#### La estructura del objeto Collection
 
 El nombre que va a tener nuestro objeto será *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 
@@ -168,7 +168,7 @@ Si nos fijamos, la siguiente posición es la posición 4 y nuestra variable numV
 
 Sin más dilación vamos a ponernos a trabajar, empezaremos por los métodos **insert** y **delete**.
 
-##### Método insert( )
+#### Método insert( )
 
 Vamos a empezar pues por el método insert:
 
