@@ -24,7 +24,4 @@ public class CustomCollection {
             auxuliar = null;
         }
     }
-
-
-    auxiliar[]
 }

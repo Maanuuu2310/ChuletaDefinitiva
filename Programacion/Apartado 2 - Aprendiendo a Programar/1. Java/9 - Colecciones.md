@@ -135,18 +135,49 @@ Pero claro, ahora nos queda un valor repetido que no queremos, pero si nos damos
 
     datos[numValores - 1] = null;
 
-Con esto, borraremos el dato *Alejandro* repetido de la última posición de nuestro Array. A su vez, como ocurría con insert que añadiamos un dato y tendría que sumarse un valor, en el caso de delete sería lo contrario:
+Con esto, borraremos el dato *Alejandro* repetido de la última posición de nuestro Array. 
+
+<center>
+
+![Creando los metodos de nuestra coleccion](Imgs/Colecciones/Colecciones11.png)
+
+</center>
+
+A su vez, como ocurría con insert que al añadir un dato, tendría que sumarse un valor, en el caso de delete sería lo contrario:
 
     datos[numValores - 1] = null;
     numValores--;
 
-- Por otro lado, queremos un método **add( )**, que se encargará de añadir un valor en la última posición de nuestro Array (y como ocurría con el método insert, en caso de no haber espacio pues que se cree más).
+- Por otro lado, queremos un método **add( )**, que se encargará de añadir un valor en la última posición de nuestro Array (y como ocurría con el método insert, en caso de no haber espacio pues que se cree más). Para este punto, lo ideal es haber realizado el método insert, ya que si sencillamente queremos insertar un valor más le decimos que se situe siempre en el último; ¿y que valor tenemos ya que nos diga cual es la última posición disponible?, simple, el atributo *numValores*, ya que para el Array, equivaldría en la última posición válida. 
+#
+    public void add(Object elemento) {
+        insert(elemento, numValores)
+    }
+
+Sigamos con el caso anterior, tenemos 4 valores:
+
+<center>
+
+![Creando los metodos de nuestra coleccion](Imgs/Colecciones/Colecciones12.png)
+
+</center>
+
+Si nos fijamos, la siguiente posición es la posición 4 y nuestra variable numValores, nos dice que tenemos 4 valores; por eso la utilizamos, porque nos indica la posición siguiente.
+
+- Lo siguiente que queremos es un método **search( )** que se encargará de buscar el elemento que nosotros estamos buscando en el Array, y en caso de no encontrarlo nos devolverá *-1*, tan simple como eso.
+- Por último, pero no menos importante el método **getElement( )**, que nos devolverá el elemento que se encuentra en la posición que nos pase el usuario al llamar a este método.
+
+Sin más dilación vamos a ponernos a trabajar, empezaremos por los métodos **insert** y **delete**.
 
 ###### Método insert( )
 
 Vamos a empezar pues por el método insert:
 
-En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***.
+En primer lugar lo declararemos en nuestro código con los parámetros que se nos pide, y al no devolver ningún valor, será un ***void***.
+
+    public void insert(Object elemento, int posicion) {
+      [...]
+    }
 
 Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico.
 
@@ -154,19 +185,21 @@ En la condición se añadió un array nuevo, lo llamaremos "auxiliar"; dicho arr
 
 <center>
 
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones15.png)
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones13.png)
 
 </center>
 
 Y como podemos ver, justo después al tener ya una copia de los datos que teniamos, podemos remplazar el Array anterior con uno nuevo **que encima es más grande** que el anterior (concrectamente el doble).
 
-La sintaxis que podemos ver, es exactamente la misma que la vista en el constructor, con la diferencia de que estamos creando un Array nuevo, el doble de grande. Aun así, aun no hemos terminado, tenemos que meter los datos del Array auxiliar en el nuevo Array, para ello haremos un bucle "for i" sencillo que se encargará de poner los datos en el nuevo Array, evidentemente tenemos datos que nos pueden facilitar esta tarea, uno de ellos es el *numValores* por ejemplo:
+La sintaxis que podemos ver, es exactamente la misma que la vista en el constructor, con la diferencia de que estamos creando un Array nuevo, el doble de grande. Aun así, aun no hemos terminado, tenemos que meter los datos del Array auxiliar en el nuevo Array, para ello haremos un bucle "for i" sencillo que se encargará de poner los datos en el nuevo Array, evidentemente tenemos datos que nos pueden facilitar esta tarea, uno de ellos es el *numValores* por ejemplo, que nos dice cuantos datos tenemos guardados en auxiliar:
 
 <center>
 
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones16.png)
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones14.png)
 
 </center>
+
+
 
 
 
