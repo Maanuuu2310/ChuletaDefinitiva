@@ -86,26 +86,53 @@ Esto es lo que deberá hacer nuestro método **insert ( )**. Pero claro, para ha
 
     insert(Object elemento, int posicion);
 
+Evidentemente, al añadir una posición más deberemos sumar uno a nuestro número de valores.
+
 - Se necesitará también un segundo método llamado **delete( )**, que se encargará de eliminar un valor según una posición que será proporcionada por el usuario. Como en el caso anterior, tenemos que cumplir una condicion:
   - **Condición**: en caso de que borremos un dato, que tenga datos a su alrededor, tendremos hacer que el hueco sea rellenado por los datos que se encuentran detrás de la posición del dato que hemos borrado.
 
-Imaginemos el Array que teniamos antes, justo cuando habiamos añadido el nombre de Alberto; imaginemos que queremos borrar al usuario Marcos:
-Vamos a crear este elemento.
+Pongamos de nuevo el Array que teniamos antes, justo cuando habiamos añadido el nombre de *Alberto*; imaginemos que queremos borrar al usuario Marcos:
 
-###### Método insert( )
+<center>
 
-En primer lugar lo declararemos en nuestro código con los parámetros que nos pide (elemento y posición), y al no devolver ningún valor, será un ***void***.
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones7.png)
 
-Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico. 
+</center>
 
+Si lo borramos como hemos hecho hasta ahora (que realmente no se puede borrar, si no que sencillamente se pone en *"null"*), debería de quedarnos el Array algo así:
 
-En la condición se añadió un array nuevo, llamado "auxiliar", dicho array servirá **unicamente, para hacer una copia del Array original** (datos[ ] o data[ ] como lo hayais llamado).
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8.png)
+
+</center>
+
+Pero **no es esto lo que nos piden**, o al menos no es lo único, si no que queremos que los datos que hayan a la derecha pasen a este nuevo lugar. Pero claro, si nosotros en lugar de borrar directamente el dato, utilizasemos el valor que viene después, en este caso *Luis*, para escachar a *Marcos* (no escacheis a la gente pls) estariamos también borrando el dato ¿verdad?, realmente remplazandolo pero sería lo mismo conceptualmente:
 
 <center>
 
 ![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones9.png)
 
 </center>
+
+Entonces, si después de Luis viene alejandro, el resultado final debería ser algo así:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones10.png)
+
+</center>
+
+Pero claro, ahora nos queda un valor repetido que no queremos, pero si nos damos cuenta, el número de Valores que teniamos nosotros es 5 (antes de que borrasemos a marcos), pero el Array no lee las posiciones como las hacemos nosotros, si no que en su lugar **le resta un valor, ya que empieza en 0**. Pues utilizando el atributo del número de valores, podemos borrar el valor repetido de la última posición, poniendo un null en su lugar, con una instrucción tan fácil como la siguiente:
+
+    datos[numValores - 1] = null;
+
+Con esto, borraremos el dato *Alejandro* repetido de la última posición de nuestro Array. A su vez, como ocurría con insert que añadiamos un dato y tendría que sumarse un valor, en el caso de delete sería lo contrario:
+
+    datos[numValores - 1] = null;
+    numValores--;
+
+###### Método insert( )
 
 Vamos a empezar pues por el método insert:
 
@@ -117,7 +144,7 @@ En la condición se añadió un array nuevo, lo llamaremos "auxiliar"; dicho arr
 
 <center>
 
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones7.png)
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones15.png)
 
 </center>
 
@@ -127,7 +154,7 @@ La sintaxis que podemos ver, es exactamente la misma que la vista en el construc
 
 <center>
 
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8.png)
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones16.png)
 
 </center>
 
