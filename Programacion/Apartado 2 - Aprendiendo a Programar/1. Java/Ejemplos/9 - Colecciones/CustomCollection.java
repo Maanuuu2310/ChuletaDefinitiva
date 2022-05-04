@@ -1,4 +1,4 @@
-public class CustomCollection<T> {
+public class CustomCollection {
     private Object datos[] = null;
     private int numValores = 0;
 
@@ -6,15 +6,15 @@ public class CustomCollection<T> {
         datos = new Object[capacidadInicial];
     }
 
-    public T getElement(int posicion) {
-        return (T) datos[posicion];
+    public Object getElement(int posicion) {
+        return datos[posicion];
     }
 
     public int numeroValores() {
         return numValores;
     }
 
-    public void insertar(T elemento, int posicion) {
+    public void insertar(Object elemento, int posicion) {
 
         if (numValores == datos.length) {
             Object auxuliar[] = datos;
@@ -37,7 +37,7 @@ public class CustomCollection<T> {
 
     }
 
-    public int search(T elemento) {
+    public int search(Object elemento) {
         for (int i = 0; i < numValores; i++) {
             if (datos[i].equals(elemento)) {
                 return i;
@@ -46,11 +46,11 @@ public class CustomCollection<T> {
         return -1;
     }
 
-    public void add(T elemento) {
+    public void add(Object elemento) {
         insertar(elemento, numValores);
     }
 
-    public T delete(int posicion) {
+    public Object delete(int posicion) {
         Object auxiliar = datos[posicion];
 
         for (int j = posicion; j < numValores - 1; j++) {
@@ -58,7 +58,7 @@ public class CustomCollection<T> {
         }
 
         numValores--;
-        return (T) auxiliar;
+        return auxiliar;
 
     }
 

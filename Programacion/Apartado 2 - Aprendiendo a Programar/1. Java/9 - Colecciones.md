@@ -255,13 +255,34 @@ Para ello deberemos empezar en el último valor que tenemos, en este caso el que
 
 Ahora, veamos la condición; dice, que mientras la variable anterior (que en el primer momento es 4) **sea mayor que la posición en la que vamos a poner nuestro dato**, es decir 0 en este caso, se vaya **restando de uno en uno** (para que vaya moviendose hacia la izquierda). No es nada del otro mundo, sencillamente mientras la variable no haya llegado al punto en el que queremos poner nuestro valor, que no pare.
 
+
 Y por último, en cada vuelta que da el for, lo que hará internamente es añadir en la posición que está libre (osea donde no hay peligro de perder ningún nombre)
+
+Ahora, nos queda hacer que cuando añadamos un valor nuevo, se ponga en la posición que queremos y se sume uno a nuestro atributo de numero de valores:
 
 <center>
 
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones19.gif)
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones19.png)
+
+</center>
+
+Ahora con todo esto, nuestro método hará algo como lo que deciamos en el ejemplo de antes.
+
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones21.gif)
+
+</center>
+
+Por si lo necesitas, este es el código completo del método.
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones20.png)
 
 </center>
 
 
+#### El método delete()
 
