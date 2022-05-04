@@ -85,7 +85,18 @@ Esto es lo que deberá hacer nuestro método **insert ( )**. Pero claro, para ha
 
     insert(Object elemento, int posicion);
 
-Vamos a crear este elemento:
+- Se necesitará también un segundo método llamado **delete( )**, que se encargará de eliminar un valor según una posición que será proporcionada por el usuario. Como en el caso anterior, tenemos que cumplir una condicion:
+  - **Condición**: en caso de que borremos un dato, que tenga datos a su alrededor, tendremos hacer que el hueco sea rellenado por los datos que se encuentran detrás de la posición del dato que hemos borrado.
+
+Imaginemos el Array que teniamos antes, justo cuando habiamos añadido el nombre de Alberto; imaginemos que queremos borrar al usuario Marcos:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones7.png)
+
+</center>
+
+Vamos a empezar pues por el método insert:
 
 En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***:
 
