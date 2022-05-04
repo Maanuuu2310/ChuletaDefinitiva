@@ -10,6 +10,7 @@ Nuestra Coleccion va a ser un Objeto, como los que vimos anteriormente; dicho ob
 
 ###### La estructura del objeto Collection
 
+El nombre que va a tener nuestro objeto será Array, también llamado *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 El nombre que va a tener nuestro objeto será *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 
 Definiremos dos atributos:
@@ -85,9 +86,182 @@ Esto es lo que deberá hacer nuestro método **insert ( )**. Pero claro, para ha
 
     insert(Object elemento, int posicion);
 
-Vamos a crear este elemento:
+Evidentemente, al añadir una posición más deberemos sumar uno a nuestro número de valores.
 
-En primer lugar lo declararemos en nuestro código con los parámetros que nos pide, y al no devolver ningún valor, será un ***void***:
+- Se necesitará también un segundo método llamado **delete( )**, que se encargará de eliminar un valor según una posición que será proporcionada por el usuario. Como en el caso anterior, tenemos que cumplir una condicion:
+  - **Condición**: en caso de que borremos un dato, que tenga datos a su alrededor, tendremos hacer que el hueco sea rellenado por los datos que se encuentran detrás de la posición del dato que hemos borrado.
 
+Pongamos de nuevo el Array que teniamos antes, justo cuando habiamos añadido el nombre de *Alberto*; imaginemos que queremos borrar al usuario Marcos:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones7.png)
+
+</center>
+
+Si lo borramos como hemos hecho hasta ahora (que realmente no se puede borrar, si no que sencillamente se pone en *"null"*), debería de quedarnos el Array algo así:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8.png)
+
+</center>
+
+Pero **no es esto lo que nos piden**, o al menos no es lo único, si no que queremos que los datos que hayan a la derecha pasen a este nuevo lugar y rellenen el espacio en blanco. 
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones8_Wrong.png)
+
+</center>
+
+Pero claro, si nosotros en lugar de borrar directamente el dato, utilizasemos el valor que viene después, en este caso *Luis*, para escachar a *Marcos* (no escacheis a la gente pls) estariamos también borrando el dato ¿verdad?, realmente remplazandolo pero sería lo mismo conceptualmente:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones9.png)
+
+</center>
+
+Entonces, si después de Luis viene alejandro, el resultado final debería ser algo así:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones10.png)
+
+</center>
+
+Pero claro, ahora nos queda un valor repetido que no queremos, pero si nos damos cuenta, el número de Valores que teniamos nosotros es 5 (antes de que borrasemos a marcos), pero el Array no lee las posiciones como las hacemos nosotros, si no que en su lugar **le resta un valor, ya que empieza en 0**. Pues utilizando el atributo del número de valores, podemos borrar el valor repetido de la última posición, poniendo un null en su lugar, con una instrucción tan fácil como la siguiente:
+
+    datos[numValores - 1] = null;
+
+Con esto, borraremos el dato *Alejandro* repetido de la última posición de nuestro Array. 
+
+<center>
+
+![Creando los metodos de nuestra coleccion](Imgs/Colecciones/Colecciones11.png)
+
+</center>
+
+A su vez, como ocurría con insert que al añadir un dato, tendría que sumarse un valor, en el caso de delete sería lo contrario:
+
+    datos[numValores - 1] = null;
+    numValores--;
+
+- Por otro lado, queremos un método **add( )**, que se encargará de añadir un valor en la última posición de nuestro Array (y como ocurría con el método insert, en caso de no haber espacio pues que se cree más). Para este punto, lo ideal es haber realizado el método insert, ya que si sencillamente queremos insertar un valor más le decimos que se situe siempre en el último; ¿y que valor tenemos ya que nos diga cual es la última posición disponible?, simple, el atributo *numValores*, ya que para el Array, equivaldría en la última posición válida. 
+#
+    public void add(Object elemento) {
+        insert(elemento, numValores)
+    }
+
+Sigamos con el caso anterior, tenemos 4 valores:
+
+<center>
+
+![Creando los metodos de nuestra coleccion](Imgs/Colecciones/Colecciones12.png)
+
+</center>
+
+Si nos fijamos, la siguiente posición es la posición 4 y nuestra variable numValores, nos dice que tenemos 4 valores; por eso la utilizamos, porque nos indica la posición siguiente.
+
+- Lo siguiente que queremos es un método **search( )** que se encargará de buscar el elemento que nosotros estamos buscando en el Array, y en caso de no encontrarlo nos devolverá *-1*, tan simple como eso.
+- Por último, pero no menos importante el método **getElement( )**, que nos devolverá el elemento que se encuentra en la posición que nos pase el usuario al llamar a este método.
+
+Sin más dilación vamos a ponernos a trabajar, empezaremos por los métodos **insert** y **delete**.
+
+###### Método insert( )
+
+Vamos a empezar pues por el método insert:
+
+En primer lugar lo declararemos en nuestro código con los parámetros que se nos pide, y al no devolver ningún valor, será un ***void***.
+
+    public void insert(Object elemento, int posicion) {
+      [...]
+    }
+
+Lo primero en lo que tendremos que pensar cuando vayamos a introducir un dato, es en si tenemos espacio suficiente, ya que si no tenemos espacio suficiente de poco nos sirve el Array dinámico.
+
+En la condición se añadió un array nuevo, lo llamaremos "auxiliar"; dicho array servirá unicamente, para hacer una copia del Array original (datos[ ] o data[ ] como lo hayais llamado).
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones13.png)
+
+</center>
+
+Y como podemos ver, justo después al tener ya una copia de los datos que teniamos, podemos remplazar el Array anterior con uno nuevo **que encima es más grande** que el anterior (concrectamente el doble).
+
+La sintaxis que podemos ver, es exactamente la misma que la vista en el constructor, con la diferencia de que estamos creando un Array nuevo, el doble de grande. Aun así, aun no hemos terminado, tenemos que meter los datos del Array auxiliar en el nuevo Array, para ello haremos un bucle *"for i"* sencillo que se encargará de poner los datos en el nuevo Array, evidentemente tenemos datos que nos pueden facilitar esta tarea, uno de ellos es el *numValores* por ejemplo, que nos dice cuantos datos tenemos guardados en auxiliar:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones14.png)
+
+</center>
+
+Ahora necesitamos hacer, que en caso de querer añadir un valor en una posición que ya esté ocupada, el valor sea añadido en la posición en la que se pretende, pero los otros valores deberán moverse, para esto usaremos otro bucle *"for i"*. 
+
+Este bucle tendrá un funcionamiento bastante diferente al que podemos estar acostumbrados, ya que actuará para cumplir lo que habiamos planteado al inicio:
+
+Tenemos que conseguir un bucle, que nos sitúe los nombres de tal manera que no se pierda ninguno, pero ¿como?. Volvamos a el primer ejemplo que vimos:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones4.png)
+
+</center>
+
+Si nos fijamos, tenemos 4 valores; en caso de nosotros querer meter un valor más, por ejemplo en la posición 0, si no tenemos nada preparado, se nos meterá el nombre y nos escachará a Jose, y no queremos que nos escachen a Jose. Para evitar esto, deberemos mover primero los nombres una posición a la derecha:
+
+- **¿Por qué una posición?:** porque hemos diseñado nuestro Array para que se nos introduzca un único valor.
+- **¿Por qué a la derecha?:** porque los Array no trabajan con números negativos, por lo que al intentar mover los nombres a la derecha, nos saldremos de nuestro Array.
+
+De esta manera nos evitamos problemas, y así entederemos mejor este concepto, que en realidad es más simple de lo que pueda parecer.
+
+El objetivo que perseguimos es que los nombres que queremos que se muevan, aparezcan como en la siguiente imagen:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones15.png)
+
+</center>
+
+Como podemos ver, en la posición 0 y en la siguiente hay dos Joses, porque queremos que en la posición 0 se introduzca nuestro nuevo valor; vamos a verlo mejor en el código:
+
+Creamos un bucle for, dicho bucle for tendrá los tres campos que siempre tiene, una variable que contará en el bucle, que si cumple la condición que se propone será alterada segun  (bien sea, sumando o restando, Ojo con esto). Haremos esto:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones16.png)
+
+</center>
+
+Crearemos la variable (que nombraremos como queramos, siempre y cuando no esté siendo utilizada en el mismo *scope*) que se encargará de contar en el bucle. Esta variable la asignaremos con la condición de que sea el valor del número de valores **menos 1**. 
+
+Pero ¿Por qué?, volvamos al dibujo mental en el que el Array está intacto. Queremos mover los datos de tal manera que no los perdamos, haciendo que dejen un hueco para el nuevo valor. 
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones17.png)
+
+</center>
+
+Para ello deberemos empezar en el último valor que tenemos, en este caso el que se encuentra en la posición **3:** *Alejandro*, **¿y cuanto es 4 - 1?** , exacto **3**, la posición de nuestro último valor. Es por esto que estamos empezando aquí, porque vamos a ir moviendo estos valores a la derecha; y si eres rápido recapacitando probablemente te hayas dado cuenta ya, pero este for es un for *invertido*, en lugar de sumar vamos a restar esta variable para que vaya moviendo cada valor a la posición del siguiente, como se puede ver a continuación:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones18.png)
+
+</center>
+
+Ahora, veamos la condición; dice, que mientras la variable anterior (que en el primer momento es 4) **sea mayor que la posición en la que vamos a poner nuestro dato**, es decir 0 en este caso, se vaya **restando de uno en uno** (para que vaya moviendose hacia la izquierda). No es nada del otro mundo, sencillamente mientras la variable no haya llegado al punto en el que queremos poner nuestro valor, que no pare.
+
+Y por último, en cada vuelta que da el for, lo que hará internamente es añadir en la posición que está libre (osea donde no hay peligro de perder ningún nombre)
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones19.gif)
+
+</center>
 
 

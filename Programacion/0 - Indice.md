@@ -23,7 +23,7 @@ Cada tema está agrupado a su vez en apartados, de los cuales, hay algunos que e
     - Funciones
     - [Objetos](./Apartado%202%20-%20Aprendiendo%20a%20Programar/1.%20Java/7%20-%20Objetos%20en%20Java.md)
       - [Métodos](./Apartado%202%20-%20Aprendiendo%20a%20Programar/1.%20Java/7.1%20-%20M%C3%A9todos%20de%20Acceso.md)
-      - Colecciones
+      - [Colecciones](Apartado%202%20-%20Aprendiendo%20a%20Programar/1.%20Java/9%20-%20Colecciones.md)
 
 ###### Programación en JavaScript:
   - Introducción a JavaScript 
