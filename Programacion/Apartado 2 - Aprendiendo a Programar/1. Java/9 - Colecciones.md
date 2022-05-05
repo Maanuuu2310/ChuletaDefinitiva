@@ -358,5 +358,23 @@ En caso de cumplirse la condición anterior, aparte de sumar el índice del bucl
 
 </center>
 
+Y solo nos quedaría devolver el dato, no sin antes decir que hemos quitado uno, para ello declararemos lo siguiente:
 
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones26.png)
+
+</center>
+
+> Y ahora, aprovechando que volvemos a tener un valor auxiliar hay que comentar algo medianamente importante. Si recordamos, en el anterior ejemplo (en caso de habernos fijado) en el código ponemos esto para borrar el Array auxiliar (ya que no lo utilizaremos más una vez tengamos el que es más grande): 
+>
+><center>
+>
+>![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones27.png)
+>
+></center>
+>
+> Esto lo hacemos para poder aligerar la memoria, evidentemente la cantidad que tenemos ocupando es ridículamente pequeña pero no deja de ser una buena práctica. Igualmente, no hay que preocuparse por esto al menos en Java, ya que el compilador se encarga de hacer esto por nosotros pero con cosas como estas facilitamos al compilador el hacer el trabajo. 
+> 
+> Evidentemente en el caso del delete, no podemos hacer esto ya que perderíamos irremediablemente el dato que queremos pasar al usuario
 
