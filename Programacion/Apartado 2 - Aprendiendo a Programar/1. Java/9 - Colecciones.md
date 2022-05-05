@@ -1,4 +1,4 @@
-# Colecciones
+# Colecciones (Arrays dinámicos)
 
 A la hora de almacenar elementos o cualquier objeto en un Array, nos hemos encontrado con un impedimento bastante curioso (al menos en Java) y es que los Arrays **son fijos** y no puede aumentarse su tamaño para así añadir más información en caso de requerirse.
 
@@ -9,6 +9,14 @@ Para poder crear un Array dinámico deberemos saber primero como funciona:
 Nuestra Coleccion va a ser un Objeto, como los que vimos anteriormente; dicho objeto tendrá sus atributos, constructor y métodos. Vamos a ir de uno en uno viendo cada una de sus partes.
 
 #### La estructura del objeto Collection
+
+En caso de que quieras acceder, a algún método en específico oara verlo con profundidad dejo un mini Índice aquí. En caso que quieras ver todo desde 0 te recomiendo que sigas el orden.
+
+- Metodos de Colección
+  - [Método insert()](#método-insert)
+  - [Método delete()](#método-delete)
+
+
 
 El nombre que va a tener nuestro objeto será *"CustomCollection"* (ya que cumple con la normativa de nombres que pudimos ver con anterioridad), este objeto tendrá varios métodos y atributos, además de su propio constructor.
 
@@ -172,7 +180,13 @@ Sin más dilación vamos a ponernos a trabajar, empezaremos por los métodos **i
 
 Vamos a empezar pues por el método insert:
 
-En primer lugar lo declararemos en nuestro código con los parámetros que se nos pide, y al no devolver ningún valor, será un ***void***.
+En primer lugar lo declararemos en nuestro código siguiendo los parámetros que se nos piden y estos otros:
+
+- El método será público, ya que queremos que los usuarios puedan utilizarlo.
+- No devolverá ningún valor, por lo que será un ***void***.
+- Recibirá dos parámetros del usuario, un elemento y una posición.
+
+Dicho esto, podriamos decir que una estructura correcta sería la siguiente:
 
     public void insert(Object elemento, int posicion) {
       [...]
@@ -284,5 +298,42 @@ Por si lo necesitas, este es el código completo del método.
 </center>
 
 
-#### El método delete()
+#### Método delete()
+
+El método delete será prácticamente lo mismo que el método insert, con la diferencia clara de que en lugar de añadir un valor, lo exterminará.
+
+La diferencia más significativa respecto al insert (ignorando funcionamiento, que es evidente) es que este método **si devuelve a un valor**, más que nada por tradición; el valor que devolverá es el que se ha borrado, por si el usuario quiere utilizarlo para algo. Por último que debemos saber antes de ponernos con este método, es que se deberá declarar la posición en la que se borrará el valor; dicho esto podemos empezar.
+
+
+El concepto que se pretende plantear es simple, tenemos el Array anterior por ejemplo, y queremos eliminar el elemento *Jose* por ejemplo:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones22.png)
+
+</center>
+
+Lo que deberemos hacer, es lo siguiente:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones23.gif)
+
+</center>
+
+Como podemos ver, es prácticamente similar a lo que hicimos antes. <br>
+
+Lo primero que tenemos que hacer es crear el método, para ello tendremos que declarar lo siguiente:
+
+- Que sea público.
+- Que devuelva un valor
+- Y que se le pase como parámetro una posición.
+
+Sabiendo esto, solo deberemos poner una estructura parecida a la siguiente:
+
+    public Object delete(int posicion) {
+      [...]
+    }
+
+**RECUERDA:** no pasa nada por poner el mismo nombre de parámetro que tiene otro método, ya que están separados entre si por lo que denominabamos como *scope*, ten encuenta esto para todo tipo de actividades.
 
