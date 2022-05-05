@@ -304,25 +304,6 @@ El método delete será prácticamente lo mismo que el método insert, con la di
 
 La diferencia más significativa respecto al insert (ignorando funcionamiento, que es evidente) es que este método **si devuelve a un valor**, más que nada por tradición; el valor que devolverá es el que se ha borrado, por si el usuario quiere utilizarlo para algo. Por último que debemos saber antes de ponernos con este método, es que se deberá declarar la posición en la que se borrará el valor; dicho esto podemos empezar.
 
-
-El concepto que se pretende plantear es simple, tenemos el Array anterior por ejemplo, y queremos eliminar el elemento *Jose* por ejemplo:
-
-<center>
-
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones22.png)
-
-</center>
-
-Lo que deberemos hacer, es lo siguiente:
-
-<center>
-
-![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones23.gif)
-
-</center>
-
-Como podemos ver, es prácticamente similar a lo que hicimos antes. <br>
-
 Lo primero que tenemos que hacer es crear el método, para ello tendremos que declarar lo siguiente:
 
 - Que sea público.
@@ -336,4 +317,46 @@ Sabiendo esto, solo deberemos poner una estructura parecida a la siguiente:
     }
 
 **RECUERDA:** no pasa nada por poner el mismo nombre de parámetro que tiene otro método, ya que están separados entre si por lo que denominabamos como *scope*, ten encuenta esto para todo tipo de actividades.
+
+Lo primero que deberemos declarar, es la variable auxiliar que se encargará de almacenar el valor que vamos a devolver al final de nuestro método. Este valor será igual a el valor que se encuentre en el array de datos según la posición que nos dieron; algo asi:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones24.png)
+
+</center>
+
+Con esto, nos aseguramos que el valor se encuentra a salvo y seguro, para poder nosotros escachar el que se encuentra en el Array de datos (recuerdo, por favor, no escacheis cosas):
+
+Para poder ahora hacer lo que nos pide el método necesitamos si o sí un bucle, ya que deberemos recorrer valores. Usaremos un bucle for, que de una manera parecida a lo que hacía nuestro bucle para el método insert, recorrerá el Array para poder cumplir con lo que se nos pide.
+
+El bucle tiene la siguiente estructura:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones25.png)
+
+</center>
+
+Vamos a destriparla (metafóricamente hablando por supuesto):
+
+Primero, creamos la variable *j* , que inicialmente será igual a **la posicion del valor que se nos ha dado**, por ejemplo, si queremos borrar como dijimos antes al valor Jose, su posición sería la posición 1 en el array.
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones22.png)
+
+</center>
+
+Tras de esta declaración, se nos pone la condición de que mientras la variable *j*, sea menor que el número de valores que tenemos (en este **ejemplo serían 5**), que vaya aumentando el valor. 
+
+En caso de cumplirse la condición anterior, aparte de sumar el índice del bucle, tenemos una condición que se cumple con cada vuelta que damos, y es la de que el valor que se encuentre en la siguiente posición respecto a la que nos encontramos ahora. Básicamente se hará lo que vimos anteriormente:
+
+<center>
+
+![Creando los atributos de nuestra coleccion](Imgs/Colecciones/Colecciones23.gif)
+
+</center>
+
+
 
